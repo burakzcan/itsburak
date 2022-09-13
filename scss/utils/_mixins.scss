@@ -1,0 +1,47 @@
+// Push auto horizontally
+
+@mixin push--auto {
+    margin: {
+        left: auto;
+        right: auto;
+    }
+}
+
+// Placeholders
+
+@mixin input-placeholder {
+    &.placeholder { @content; }
+    &:-moz-placeholder { @content; }
+    &::-moz-placeholder { @content; }
+    &:-ms-input-placeholder { @content; }
+    &::-webkit-input-placeholder { @content; }
+}
+
+@mixin hover {
+    @media (hover: hover) and (pointer: fine) and (min-width: map-get($breakpoints, sm)) {
+        &:hover,
+        &:focus {
+            @content;
+        }
+    }
+}
+
+// Media Queries
+
+$breakpoints: (
+    "p":        400px,
+    "sm":       768px,
+    "md":       1100px
+);
+
+@mixin media($width, $type: min) {
+    @if map_has_key($breakpoints, $width) {
+        $width: map_get($breakpoints, $width);
+        @if $type == max {
+            $width: $width - 1px;
+        }
+        @media only screen and (#{$type}-width: $width) {
+            @content;
+        }
+    }
+}

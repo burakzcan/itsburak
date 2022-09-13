@@ -1,0 +1,11 @@
+/* Fonts */
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:400');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap');
+
+$def-font-family: 'Inter', sans-serif;
+
+html,
+body {
+  font-family: $def-font-family;
+}

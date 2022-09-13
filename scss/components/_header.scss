@@ -1,0 +1,51 @@
+.b-header {
+    padding: 16px 0;
+    background: $wheaty;
+
+    @include media(md, max) {
+        padding: 16px;
+    }
+
+    .brand {
+        &__text {
+            font-size: 14px;
+            font-weight: 500;
+            color: $dark-blue;
+        }
+    }
+
+    .nav {
+        margin-left: auto;
+
+        &__item {
+            font-size: 14px;
+            font-weight: 500;
+            margin: 0 14px;
+            border-bottom: 2px solid transparent;
+            transition: .3s ease;
+
+            &:nth-child(1) {
+                margin-left: 0;
+            }
+
+            &:nth-last-child(1) {
+                margin-right: 0;
+            }
+
+            @include hover {
+                border-bottom: 2px solid $dark-blue;
+            }
+        }
+
+        &__text {
+            color: $dark-blue;
+        }
+    }
+}
+
+[data-page-id="index"],
+[data-page-id=""] {
+    .brand {
+        display: none;
+    }
+}
