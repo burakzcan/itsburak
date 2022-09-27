@@ -11,7 +11,7 @@
             font-size: 50px;
             font-weight: 700;
 
-            &--works {
+            &--type-2 {
                 @include media(p, max) {
                     font-size: 32px;
                 }

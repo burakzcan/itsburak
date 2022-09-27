@@ -1,0 +1,33 @@
+.b-now {
+    @include media(md, max) {
+        padding: 16px;
+    }
+
+    .now {
+        width: 100%;
+        padding: 100px 0;
+        border-bottom: .5px solid rgba($dark-blue, .3);
+
+        &__title {
+            font-size: 32px;
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+
+        &__text {
+            font-size: 16px;
+            color: $textColor;
+            line-height: 1.7;
+            margin-bottom: 0;
+
+            .now-link {
+                font-weight: 500;
+                color: $blue;
+
+                @include hover {
+                    color: $dark-blue;
+                }
+            }
+        }
+    }
+}
