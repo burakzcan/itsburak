@@ -6,6 +6,7 @@
 // Variables
 
 $max-width: 1100px;
+$max-width-narrow: 600px;
 
 
 * {
@@ -75,6 +76,10 @@ td {
 
 .container {
     max-width: $max-width !important;
+
+    &--narrow {
+        max-width: $max-width-narrow !important;
+    }
 }
 
 .navbar-light .navbar-toggler {

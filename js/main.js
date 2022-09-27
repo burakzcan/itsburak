@@ -4,8 +4,6 @@ $(document).ready(function(){
     })
 });
 
-AOS.init();
-
 cache = {
     $body: $('body')
 }

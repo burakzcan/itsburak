@@ -44,7 +44,8 @@
 }
 
 [data-page-id="index"],
-[data-page-id="/"] {
+[data-page-id="/"],
+[data-page-id=""] {
     .brand {
         display: none;
     }
