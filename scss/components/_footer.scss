@@ -1,0 +1,39 @@
+.b-footer {
+    @include media(md, max) {
+        padding: 16px;
+    }
+
+    .get-in-touch {
+        padding: 70px 0 120px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        @include media(p, max) {
+            padding: 30px 0;
+            justify-content: flex-start;
+            align-items: flex-start;
+        }
+
+        &__title {
+            font-size: 42px;
+            font-weight: 600;
+
+            @include media(p, max) {
+                font-size: 32px;
+            }
+        }
+
+        &__link {
+            font-size: 24px;
+            font-weight: lighter;
+            color: $dark-blue;
+
+            @include media(p, max) {
+                font-size: 18px;
+            }
+        }
+    }
+}
