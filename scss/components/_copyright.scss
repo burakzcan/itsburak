@@ -1,0 +1,11 @@
+.b-copyright {
+    font-size: 12px;
+    text-align: left;
+    color: $dark-blue;
+    padding: 20px 0;
+    background: $wheaty;
+
+    @include media(md, max) {
+        padding: 16px;
+    }
+}

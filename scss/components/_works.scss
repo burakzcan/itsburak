@@ -8,6 +8,14 @@
     .works {
         flex-direction: row;
 
+        .col-md-6:nth-child(1) {
+            .works__wrapper {
+                @include media(p, max) {
+                    margin-bottom: 30px;
+                }
+            }
+        }
+
         &__title {
             font-size: 32px;
             font-weight: 600;
@@ -44,7 +52,7 @@
             }
 
             @include media(p, max) {
-                padding: 0;
+                padding: 16px;
             }
 
             .work-image {
