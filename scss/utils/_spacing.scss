@@ -1,0 +1,40 @@
+@function pxToRem($pxSize) {
+    @return $pxSize / 16 + rem;
+}
+
+$rule: (
+    'margin',
+    'padding'
+);
+
+$direction: (
+    l: 'left',
+    r: 'right',
+    t: 'top',
+    b: 'bottom'
+);
+
+$size: (
+    0: 0,
+    1: 6,
+    2: 8,
+    3: 12,
+    4: 16,
+    5: 24,
+    6: 32,
+    7: 40,
+    8: 48,
+    9: 80,
+    10: 148
+);
+
+@each $rules in $rule {
+    @each $directions, $d-value in $direction {
+        @each $size-prop, $s-value in $size {
+            .u-#{$rules}-#{$directions}-#{$size-prop} {
+                #{$rules}-#{$d-value}: $s-value + px;
+                #{$rules}-#{$d-value}: pxToRem($s-value);
+            }
+        }
+    }
+}

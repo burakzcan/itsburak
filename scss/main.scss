@@ -9,6 +9,8 @@
 @import '../scss/utils/mixins';
 @import '../scss/utils/functions';
 @import '../scss/utils/variables';
+@import '../scss/utils/spacing';
+@import '../scss/utils/font-size';
 
 // Components
 
@@ -21,3 +23,4 @@
 @import '../scss/components/about';
 @import '../scss/components/now';
 @import '../scss/components/work-detail';
+@import '../scss/components/styleguide';

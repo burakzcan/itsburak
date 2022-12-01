@@ -1,0 +1,94 @@
+.b-styleguide {
+    .styleguide {
+        position: relative;
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 10px;
+            width: 100%;
+            background: linear-gradient(83.09deg, #2B63A5 6.33%, #3AACFF 166.32%);
+        }
+
+        &__header {
+            padding: 120px 0;
+
+            ul {
+                font-weight: 700;
+                font-size: 24px;
+                line-height: 29px;
+                list-style: none;
+                display: flex;
+                flex-direction: row;
+                padding: 0;
+                margin: 0;
+
+                li {
+                    margin-right: 30px;
+                    margin-bottom: 0;
+                    padding: 0;
+                    position: relative;
+
+                    &::before {
+                        content: '->';
+                        position: absolute;
+                        right: -25px;
+                        top: 50%;
+                        transform: translateY(-50%);
+                    }
+
+                    &:nth-last-child(1) {
+                        margin-right: 0;
+
+                        &::before {
+                            display: none;
+                        }
+                    }
+                }
+            }
+
+            h3 {
+                margin-top: 80px;
+                font-weight: 700;
+                font-size: 60px;
+                line-height: 73px;
+                letter-spacing: -.5px;
+            }
+        }
+    }
+
+    .fonts {
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+
+            li {
+                margin-bottom: 10px;
+
+                h1 {
+                    margin-bottom: 0 !important;
+                }
+
+                span {
+                    color: #919191;
+                }
+            }
+        }
+
+        &__usage {
+            padding: 14px;
+            border: .5px solid #ddd;
+            background: #eee;
+
+            span {
+                padding: 6px;
+
+                b {
+                    color: red;
+                }
+            }
+        }
+    }
+}

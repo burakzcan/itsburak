@@ -1,0 +1,45 @@
+@function pxToRem($pxSize) {
+    @return $pxSize / 16 + rem;
+}
+
+$font-size-list: (
+    h1: (
+        32, 24
+    ),
+    h2: (
+        24, 18
+    ),
+    h3: (
+        18, 16
+    ),
+    h4: (
+        16, 13
+    ),
+    h5: (
+        13, 12
+    ),
+    h6: (
+        12, 11
+    ),
+    h7: (
+        11, 11
+    ),
+    body-l: (
+        16, 14
+    ),
+    body-s: (
+        12, 12
+    ),
+    cta: (
+        12, 12
+    )
+);
+
+@each $font-name, $value in $font-size-list {
+    @each $d-value, $m-value in $font-name {
+        .u-fs-#{$font-name}__d {
+            font-size: $d-value; // Fallback for old browsers
+            font-size: pxToRem($d-value);
+        }
+    }
+}
